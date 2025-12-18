@@ -1,13 +1,15 @@
 {
   "name": "elgrandanescafebar",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "keywords": [],
+  "license": "ISC",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "rm -rf dist && vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "eslint": "9.22.0",
@@ -17,7 +19,5 @@
     "stylelint-config-manzdev": "^0.0.18",
     "vite": "^7.1.6",
     "vite-tsconfig-paths": "^6.0.2"
-  },
-  "keywords": [],
-  "license": "ISC"
+  }
 }
