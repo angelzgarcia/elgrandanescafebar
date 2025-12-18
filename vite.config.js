@@ -26,7 +26,7 @@ export default defineConfig({
   },
   build: {
     outDir: "../docs",
-    assetsDir: ".", 
+    assetsDir: ".",
     emptyOutDir: true
   }
 });
