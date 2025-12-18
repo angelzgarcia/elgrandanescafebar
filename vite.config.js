@@ -1,32 +1,16 @@
 import path from "node:path";
 
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
 
-const isGitHubPages = true;
-const repoName = path.basename(process.cwd()); // nombre del repo
-const mode = process.env.NODE_ENV === "production" ? "production" : "development";
+const repoName = path.basename(process.cwd());
 
-const base =
-  mode === "production" && isGitHubPages
-    ? `/${repoName}/`
-    : "/";
-
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   root: "src",
-  base,
-  mode,
-  envDir: "../",
+  base: command === "build" ? `/${repoName}/` : "/",
   publicDir: "../public",
-  plugins: [tsconfigPaths()],
-  resolve: {
-    alias: {
-      "@": new URL("./src", import.meta.url).pathname
-    }
-  },
+
   build: {
     outDir: "../docs",
-    assetsDir: ".",
     emptyOutDir: true
   }
-});
+}));
