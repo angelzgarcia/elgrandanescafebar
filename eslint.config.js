@@ -5,6 +5,6 @@ export default [
   {
     rules: {
       /* Tus reglas aquí */
-	 }
+    }
   }
 ];
