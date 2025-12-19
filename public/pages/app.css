@@ -1405,6 +1405,10 @@ footer::before {
   .feature-card {
     min-height: 300px;
   }
+
+  .section-title {
+    position: inherit;
+  }
 }
 
 @media (max-width: 576px) {
