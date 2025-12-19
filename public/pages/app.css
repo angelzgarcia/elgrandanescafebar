@@ -979,6 +979,10 @@ nav a:hover::before {
   color: var(--white);
   transform: translateY(-5px) scale(1.1);
   box-shadow: 0 10px 20px rgba(254, 52, 21, 0.4);
+
+  i {
+    color: white;
+  }
 }
 
 /* Footer */
